@@ -1,7 +1,8 @@
-const express = require('express')
-const getDnsRecords = require('../controllers/getDnsRecords')
+import express from 'express'
+
+import getDnsRecords from '../controllers/getDnsRecords'
 const getDnsRecordsRouter = express.Router()
 
 getDnsRecordsRouter.post('/', getDnsRecords)
 
-module.exports = getDnsRecordsRouter
+export default getDnsRecordsRouter
