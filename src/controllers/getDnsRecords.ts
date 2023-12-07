@@ -6,7 +6,7 @@ import { Dns } from '../types/types'
 const getDnsRecords = async (req: Request, res: Response) => {
   try {
     const { keyId, zoneId } = req.body
-    console.log(req.body)
+
     if (!keyId || !zoneId) {
       res.status(400).json({ error: 'Missing required parameters' })
     }
