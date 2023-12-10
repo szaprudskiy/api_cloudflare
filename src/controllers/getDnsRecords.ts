@@ -10,7 +10,7 @@ const getDnsRecords = async (req: Request, res: Response) => {
     if (!keyId || !zoneId) {
       res.status(400).json({ error: 'Missing required parameters' })
     }
-    const apiUrl = `${process.env.URL}/zones/${zoneId}/dns_records`
+    const apiUrl = `https://api.cloudflare.com/client/v4/zones/${zoneId}/dns_records`
 
     const response: AxiosResponse<{ result: Dns[] }> = await axios.get(apiUrl, {
       headers: {

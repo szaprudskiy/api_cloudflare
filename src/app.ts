@@ -12,7 +12,7 @@ app.use(cors())
 app.use(router)
 
 mongoose.connect(
-  `mongodb+srv://sergeizaprudskiy:${process.env.PASSWORD}@cluster0.gev2o4t.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`
+  `mongodb+srv://sergeizaprudskiy:JIBXmXtLCOWMzaiO@cluster0.gev2o4t.mongodb.net/Cloudflare?retryWrites=true&w=majority`
 )
 
 mongoose.connection.on(

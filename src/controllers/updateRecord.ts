@@ -7,7 +7,7 @@ const updateRecord = async (req: Request, res: Response) => {
 
     console.log(req.body)
 
-    const apiUrl = `${process.env.URL}/zones/${zoneId}/dns_records/${id}`
+    const apiUrl = `https://api.cloudflare.com/client/v4/zones/${zoneId}/dns_records/${id}`
 
     const response = await axios.put(
       apiUrl,
