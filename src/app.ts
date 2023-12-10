@@ -8,7 +8,12 @@ const PORT = process.env.PORT || 4002
 const app = express()
 
 app.use(express.json())
-app.use(cors())
+app.use(
+  cors({
+    origin: 'https://admin-cloudflare-szaprudskiy.vercel.app',
+    credentials: true,
+  })
+)
 app.use(router)
 
 mongoose.connect(
