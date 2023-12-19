@@ -5,7 +5,7 @@ const account = async (req: Request, res: Response) => {
   try {
     const accountDataArray: FormData[] = req.body
 
-    console.log('accountDataArray', accountDataArray)
+    // console.log('accountDataArray', accountDataArray)
     const addedAccounts = await AccountModel.create(accountDataArray)
 
     res.status(201).json(addedAccounts)

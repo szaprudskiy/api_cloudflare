@@ -5,11 +5,11 @@ const updateRecord = async (req: Request, res: Response) => {
   try {
     const { content, name, type, zoneId, id, key } = req.body
 
-    console.log(req.body)
+    // console.log(req.body)
 
     const apiUrl = `https://api.cloudflare.com/client/v4/zones/${zoneId}/dns_records/${id}`
 
-    const response = await axios.put(
+    const response = await axios.patch(
       apiUrl,
       {
         content,
@@ -23,7 +23,7 @@ const updateRecord = async (req: Request, res: Response) => {
         },
       }
     )
-    console.log('response', response)
+    // console.log('response', response)
     res.status(200).json(response.data.result)
   } catch (error) {
     console.error('Someting went wrong with updateRecord', error)

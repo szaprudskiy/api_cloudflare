@@ -4,6 +4,7 @@ import { Response, Request } from 'express'
 const getAccounts = async (req: Request, res: Response) => {
   try {
     const accounts = await AccountModel.find()
+    // console.log(accounts)
     res.status(200).json(accounts)
   } catch (error) {
     console.error(error)
